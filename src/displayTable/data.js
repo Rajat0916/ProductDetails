@@ -39,7 +39,7 @@ export const data= [
     {id:38, name:'Rajat', amount:78967, date:'2016-04-08'},
     {id:39, name:'Rajat', amount:43645, date:'2018-06-08'},
     {id:40, name:'Rajat', amount:96575, date:'2020-08-08'},
-    {id:41, name:'Rajat', amount:3534, date:'2011-10-08'},
+    {id:41, name:'Rajat', amount:35346, date:'2011-10-08'},
     {id:42, name:'Rajat', amount:23434, date:'2013-12-08'},
     {id:43, name:'Rajesh', amount:98765, date:'2015-01-08'},
     {id:44, name:'Rajat', amount:35785, date:'2017-03-08'},
