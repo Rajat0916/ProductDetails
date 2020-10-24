@@ -1,0 +1,15 @@
+.Filter {
+    margin: 5px;
+    padding: 2px;
+    display: flex;
+}
+
+.Filter .dropdown, .Filter .inputValue  {
+    margin: 2px;
+    padding: 2px;
+}
+
+.Filter input, .Filter button {
+    height: 33px;
+    margin-right: 5px;
+}

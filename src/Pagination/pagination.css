@@ -1,0 +1,71 @@
+.App .Homepage .Pagination {
+    text-align: right;
+}
+
+.App .Homepage .Pagination .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.App .Homepage .Pagination ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.App .Homepage .Pagination .pagination > li {
+    display: inline;
+}
+
+.App .Homepage .Pagination li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.App .Homepage .Pagination ul {
+    list-style-type: disc;
+}
+
+.App .Homepage .Pagination .pagination > li:first-child > a, .App .Homepage .Pagination .pagination > li:first-child > span {
+    margin-left: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.App .Homepage .Pagination .pagination > .disabled > span, .App .Homepage .Pagination .pagination > .disabled > span:hover, .App .Homepage .Pagination .pagination > .disabled > span:focus, .App .Homepage .Pagination .pagination > .disabled > a, .pagination > .disabled > a:hover, .App .Homepage .Pagination .pagination > .disabled > a:focus {
+    color: #777777;
+    background-color: #fff;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+.App .Homepage .Pagination .pagination > li > a, .App .Homepage .Pagination .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #337ab7;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+.App .Homepage .Pagination .pagination > .active > a, .App .Homepage .Pagination .pagination > .active > span, .App .Homepage .Pagination .pagination > .active > a:hover, .App .Homepage .Pagination .pagination > .active > span:hover, .App .Homepage .Pagination .pagination > .active > a:focus, .App .Homepage .Pagination .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    cursor: default;
+}
+
+.App .Homepage .Pagination .pagination > li:last-child > a, .App .Homepage .Pagination .pagination > li:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
