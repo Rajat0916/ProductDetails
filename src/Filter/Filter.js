@@ -7,22 +7,29 @@ import './Filter.css';
 const Filter= (props)=>{
     const { Option }= Select;
     const[showInput, setInput]= useState(false);
-    const[value, setValue]= useState('name');
+    const[value, setValue]= useState('');
     const[inputValue, setInputValue]= useState('');
     
+    // Showing Input/Range based on value selected from dropdown
     useEffect(()=>{
         if(value==='name'){
             setInputValue(
                 <div className='inputValue'>
-                    <input type='string' id='name' placeholder='Enter Product Name'/>
+                    <input type='text' id='name' placeholder='Enter Product Name' onKeyPress={(event)=>{
+                        if(event.key==='Enter')
+                            props.onClickHandler(value);
+                    }} />
                     <button id='Search' onClick={props.onClickHandler.bind(this,value)}>Search</button>
                 </div>
             )
         }else if(value==='amount'){
             setInputValue(
                 <div className='inputValue'>
-                    <input type='number' id='amountFrom' placeholder='Enter Min Amount'/>
-                    <input type='number' id='amountTo' placeholder='Enter Max Amount'/>
+                    <input type='number' id='amountFrom' placeholder='Enter Min Amount' />
+                    <input type='number' id='amountTo' placeholder='Enter Max Amount' onKeyPress={(event)=>{
+                        if(event.key==='Enter')
+                            props.onClickHandler(value);
+                    }} />
                     <button id='Search' onClick={props.onClickHandler.bind(this,value)}>Search</button>
                 </div>
             )
@@ -30,13 +37,17 @@ const Filter= (props)=>{
             setInputValue(
                 <div className='inputValue'>
                     <input type='date' id='dateFrom' />
-                    <input type='date' id='dateTo' />   
+                    <input type='date' id='dateTo' onKeyPress={(event)=>{
+                        if(event.key==='Enter')
+                            props.onClickHandler(value);
+                    }} />   
                     <button id='Search' onClick={props.onClickHandler.bind(this,value)}>Search</button>
                 </div>
             )
         }
-    },[value,props.onClickHandler])
+    },[value,props]);
     
+    //Handling dropdown change
     const onChangeHandler= (value)=>{
         setInput(true);
         setValue(value);

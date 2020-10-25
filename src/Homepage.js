@@ -11,11 +11,13 @@ const Homepage= ()=>{
     const [pageRangeDisplayed,setPageRangeDisplayed]= useState((data.length/15) + 1);
     const [searchedResult,setSearchedResult]= useState(data);
 
+    // Handling the page change
     const onChangeHandler= (id)=>{
         setActivePage(id);
         setProductDetails(searchedResult.slice(15*(id-1),(15*(id-1))+15));
     }
 
+    // Setting up states on filter change
     useEffect(()=>{
         setActivePage(1);
         setProductDetails(searchedResult.slice(0,15));
@@ -23,8 +25,8 @@ const Homepage= ()=>{
         setPageRangeDisplayed((searchedResult.length/15)+1);
     },[searchedResult]);
 
+    // Handling the filter Search Button click
     const onClickHandler= (value)=>{
-
         if(value==='name'){
             const valueEntered=document.getElementById('name').value;
             if(valueEntered !== '')
